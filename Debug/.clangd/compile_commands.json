@@ -1,0 +1,72 @@
+[
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/empty.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/OLED.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/OLED_Data.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MPU6050.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MyI2C.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System/Delay.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/PWM.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Motor.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Encoder.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/PID.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/FollowLine.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug/ti_msp_dl_config.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Key.c"
+   },
+   {
+      "directory" : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -D__USE_SYSCONFIG__ -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Debug\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source/third_party/CMSIS/Core/Include\" -I\"C:/ti/mspm0_sdk_2_10_00_04/source\" -I\"C:/Users/xuliangyun/workspace_ccstheia/xunjicar/System\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c++/v1\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/lib/clang/22/include\" -isystem\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS/include/c\" -xc",
+      "file"      : "C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/app_imurb_bt.c"
+   }
+]
