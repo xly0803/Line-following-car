@@ -19,9 +19,11 @@ PID_t TurnPID = {
 
 /* ==================== 全局变量 ==================== */
 int16_t TurnPWM = 0;
-uint8_t LostCnt = 0;
+uint16_t LostCnt = 0;
 int8_t  LastDir = 0;
-
+float Lastyaw = 0;
+uint8_t AngleFlag = 1;
+uint8_t LostFlag = 0;
 /* ==================== 初始化 ==================== */
 void LineFollow_Init(void)
 {
@@ -49,7 +51,21 @@ float Line_GetError(uint8_t data)
     }
 
     if (weightSum == 0 || weightSum == 8)
+    {
+        LostFlag = 1;
+        if(AngleFlag == 1)
+        {
+            Lastyaw = yaw;
+            AngleFlag = 0;
+        }
+        
         return LINE_LOST_ERROR;
+    }
+    else 
+    {
+        LostFlag = 0;
+        AngleFlag = 1;
+    }
     return (float)sum / weightSum;
 }
 
@@ -59,33 +75,22 @@ void Line_Follow(uint8_t data)
     float error = Line_GetError(data);
 
     // ---- 丢线处理 ----
-    if (error > 900.0f)
+    if (LostFlag)
     {
         LostCnt++;
+        Alpha = 1;
         if (LostCnt > LINE_LOST_TIMEOUT)
         {
             TurnPWM = 0;          // 长时间丢线：转向归零，由 main 决定停车
-
         }
         else 
         {
-            if (LastDir > 0)
-            {
-                TurnPWM = (int16_t)TurnPID.OutMax;
-            }
-            else if (LastDir < 0)
-            {
-                TurnPWM = (int16_t)TurnPID.OutMin;
-            }
-            else
-            {
-                TurnPWM = 0;   // 没有历史方向，不转向
-            }
-
+            TurnPWM = 0;
         }
     }
     else 
     {
+        Alpha = 0.2;
         LostCnt = 0;
 
         // ---- 借用 PID_Update 的标准框架 ----

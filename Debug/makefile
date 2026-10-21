@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./empty.o" \
 "./ti_msp_dl_config.o" \
 "./startup_mspm0g350x_ticlang.o" \
+"./Hardware/AngleClosedloop.o" \
 "./Hardware/Encoder.o" \
 "./Hardware/FollowLine.o" \
 "./Hardware/Key.o" \
@@ -23,6 +24,13 @@ ORDERED_OBJS += \
 "./Hardware/OLED_Data.o" \
 "./Hardware/PID.o" \
 "./Hardware/PWM.o" \
+"./Hardware/IMU660RB/FusionAhrs.o" \
+"./Hardware/IMU660RB/FusionCompass.o" \
+"./Hardware/IMU660RB/FusionOffset.o" \
+"./Hardware/IMU660RB/imu660rb.o" \
+"./Hardware/IMU660RB/lsm6dsr_reg.o" \
+"./Hardware/MSPM0/clock.o" \
+"./Hardware/MSPM0/interrupt.o" \
 "./System/Delay.o" \
 $(GEN_CMDS__FLAG) \
 -Wl,-ldevice.cmd.genlibs \
@@ -37,9 +45,13 @@ RMDIR := RMDIR /S/Q
 -include sources.mk
 -include subdir_vars.mk
 -include Hardware/subdir_vars.mk
+-include Hardware/IMU660RB/subdir_vars.mk
+-include Hardware/MSPM0/subdir_vars.mk
 -include System/subdir_vars.mk
 -include subdir_rules.mk
 -include Hardware/subdir_rules.mk
+-include Hardware/IMU660RB/subdir_rules.mk
+-include Hardware/MSPM0/subdir_rules.mk
 -include System/subdir_rules.mk
 -include objects.mk
 
@@ -151,8 +163,8 @@ xunjicar.out: $(OBJS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "empty.o" "ti_msp_dl_config.o" "startup_mspm0g350x_ticlang.o" "Hardware\Encoder.o" "Hardware\FollowLine.o" "Hardware\Key.o" "Hardware\MPU6050.o" "Hardware\Motor.o" "Hardware\MyI2C.o" "Hardware\OLED.o" "Hardware\OLED_Data.o" "Hardware\PID.o" "Hardware\PWM.o" "System\Delay.o" 
-	-$(RM) "empty.d" "ti_msp_dl_config.d" "startup_mspm0g350x_ticlang.d" "Hardware\Encoder.d" "Hardware\FollowLine.d" "Hardware\Key.d" "Hardware\MPU6050.d" "Hardware\Motor.d" "Hardware\MyI2C.d" "Hardware\OLED.d" "Hardware\OLED_Data.d" "Hardware\PID.d" "Hardware\PWM.d" "System\Delay.d" 
+	-$(RM) "empty.o" "ti_msp_dl_config.o" "startup_mspm0g350x_ticlang.o" "Hardware\AngleClosedloop.o" "Hardware\Encoder.o" "Hardware\FollowLine.o" "Hardware\Key.o" "Hardware\MPU6050.o" "Hardware\Motor.o" "Hardware\MyI2C.o" "Hardware\OLED.o" "Hardware\OLED_Data.o" "Hardware\PID.o" "Hardware\PWM.o" "Hardware\IMU660RB\FusionAhrs.o" "Hardware\IMU660RB\FusionCompass.o" "Hardware\IMU660RB\FusionOffset.o" "Hardware\IMU660RB\imu660rb.o" "Hardware\IMU660RB\lsm6dsr_reg.o" "Hardware\MSPM0\clock.o" "Hardware\MSPM0\interrupt.o" "System\Delay.o" 
+	-$(RM) "empty.d" "ti_msp_dl_config.d" "startup_mspm0g350x_ticlang.d" "Hardware\AngleClosedloop.d" "Hardware\Encoder.d" "Hardware\FollowLine.d" "Hardware\Key.d" "Hardware\MPU6050.d" "Hardware\Motor.d" "Hardware\MyI2C.d" "Hardware\OLED.d" "Hardware\OLED_Data.d" "Hardware\PID.d" "Hardware\PWM.d" "Hardware\IMU660RB\FusionAhrs.d" "Hardware\IMU660RB\FusionCompass.d" "Hardware\IMU660RB\FusionOffset.d" "Hardware\IMU660RB\imu660rb.d" "Hardware\IMU660RB\lsm6dsr_reg.d" "Hardware\MSPM0\clock.d" "Hardware\MSPM0\interrupt.d" "System\Delay.d" 
 	-@echo ' '
 
 .PHONY: all clean dependents

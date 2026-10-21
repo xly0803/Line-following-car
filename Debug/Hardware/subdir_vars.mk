@@ -6,6 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Hardware/AngleClosedloop.c \
 ../Hardware/Encoder.c \
 ../Hardware/FollowLine.c \
 ../Hardware/Key.c \
@@ -18,6 +19,7 @@ C_SRCS += \
 ../Hardware/PWM.c 
 
 C_DEPS += \
+./Hardware/AngleClosedloop.d \
 ./Hardware/Encoder.d \
 ./Hardware/FollowLine.d \
 ./Hardware/Key.d \
@@ -30,6 +32,7 @@ C_DEPS += \
 ./Hardware/PWM.d 
 
 OBJS += \
+./Hardware/AngleClosedloop.o \
 ./Hardware/Encoder.o \
 ./Hardware/FollowLine.o \
 ./Hardware/Key.o \
@@ -42,6 +45,7 @@ OBJS += \
 ./Hardware/PWM.o 
 
 OBJS__QUOTED += \
+"Hardware\AngleClosedloop.o" \
 "Hardware\Encoder.o" \
 "Hardware\FollowLine.o" \
 "Hardware\Key.o" \
@@ -54,6 +58,7 @@ OBJS__QUOTED += \
 "Hardware\PWM.o" 
 
 C_DEPS__QUOTED += \
+"Hardware\AngleClosedloop.d" \
 "Hardware\Encoder.d" \
 "Hardware\FollowLine.d" \
 "Hardware\Key.d" \
@@ -66,6 +71,7 @@ C_DEPS__QUOTED += \
 "Hardware\PWM.d" 
 
 C_SRCS__QUOTED += \
+"../Hardware/AngleClosedloop.c" \
 "../Hardware/Encoder.c" \
 "../Hardware/FollowLine.c" \
 "../Hardware/Key.c" \

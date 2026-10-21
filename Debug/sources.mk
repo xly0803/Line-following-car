@@ -120,5 +120,7 @@ GEN_OPTS__QUOTED :=
 SUBDIRS := \
 . \
 Hardware \
+Hardware/IMU660RB \
+Hardware/MSPM0 \
 System \
 

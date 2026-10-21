@@ -43,6 +43,7 @@
 DL_TimerG_backupConfig gQEI_0Backup;
 DL_TimerG_backupConfig gCAPTURE_0Backup;
 DL_TimerG_backupConfig gTIMER_7Backup;
+DL_SPI_backupConfig gSPI_IMU660RBBackup;
 
 /*
  *  ======== SYSCFG_DL_init ========
@@ -58,11 +59,13 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_QEI_0_init();
     SYSCFG_DL_CAPTURE_0_init();
     SYSCFG_DL_TIMER_7_init();
+    SYSCFG_DL_SPI_IMU660RB_init();
     /* Ensure backup structures have no valid state */
 
 	gQEI_0Backup.backupRdy 	= false;
 	gCAPTURE_0Backup.backupRdy 	= false;
 	gTIMER_7Backup.backupRdy 	= false;
+	gSPI_IMU660RBBackup.backupRdy 	= false;
 
 }
 /*
@@ -76,6 +79,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_saveConfiguration(void)
 	retStatus &= DL_TimerG_saveConfiguration(QEI_0_INST, &gQEI_0Backup);
 	retStatus &= DL_TimerG_saveConfiguration(CAPTURE_0_INST, &gCAPTURE_0Backup);
 	retStatus &= DL_TimerG_saveConfiguration(TIMER_7_INST, &gTIMER_7Backup);
+	retStatus &= DL_SPI_saveConfiguration(SPI_IMU660RB_INST, &gSPI_IMU660RBBackup);
 
     return retStatus;
 }
@@ -88,6 +92,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_restoreConfiguration(void)
 	retStatus &= DL_TimerG_restoreConfiguration(QEI_0_INST, &gQEI_0Backup, false);
 	retStatus &= DL_TimerG_restoreConfiguration(CAPTURE_0_INST, &gCAPTURE_0Backup, false);
 	retStatus &= DL_TimerG_restoreConfiguration(TIMER_7_INST, &gTIMER_7Backup, false);
+	retStatus &= DL_SPI_restoreConfiguration(SPI_IMU660RB_INST, &gSPI_IMU660RBBackup);
 
     return retStatus;
 }
@@ -100,6 +105,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_TimerG_reset(QEI_0_INST);
     DL_TimerG_reset(CAPTURE_0_INST);
     DL_TimerG_reset(TIMER_7_INST);
+    DL_SPI_reset(SPI_IMU660RB_INST);
 
     DL_GPIO_enablePower(GPIOA);
     DL_GPIO_enablePower(GPIOB);
@@ -107,6 +113,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_TimerG_enablePower(QEI_0_INST);
     DL_TimerG_enablePower(CAPTURE_0_INST);
     DL_TimerG_enablePower(TIMER_7_INST);
+    DL_SPI_enablePower(SPI_IMU660RB_INST);
     delay_cycles(POWER_STARTUP_DELAY);
 }
 
@@ -138,6 +145,13 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 GPIO_CAPTURE_0_C0_IOMUX, GPIO_CAPTURE_0_C0_IOMUX_FUNC,
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
 		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
+
+    DL_GPIO_initPeripheralOutputFunction(
+        GPIO_SPI_IMU660RB_IOMUX_SCLK, GPIO_SPI_IMU660RB_IOMUX_SCLK_FUNC);
+    DL_GPIO_initPeripheralOutputFunction(
+        GPIO_SPI_IMU660RB_IOMUX_PICO, GPIO_SPI_IMU660RB_IOMUX_PICO_FUNC);
+    DL_GPIO_initPeripheralInputFunction(
+        GPIO_SPI_IMU660RB_IOMUX_POCI, GPIO_SPI_IMU660RB_IOMUX_POCI_FUNC);
 
     DL_GPIO_initDigitalInputFeatures(GPIO_GRP_1_PIN_0_IOMUX,
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
@@ -203,6 +217,12 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 
     DL_GPIO_initDigitalOutput(MOTOR_BIN2_IOMUX);
 
+    DL_GPIO_initDigitalOutput(GPIO_IMU660RB_PIN_IMU660RB_CS_IOMUX);
+
+    DL_GPIO_initDigitalInputFeatures(GPIO_IMU660RB_PIN_IMU660RB_INT1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_NONE,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
+
     DL_GPIO_clearPins(GPIOA, MOTOR_BIN1_PIN |
 		MOTOR_BIN2_PIN);
     DL_GPIO_setPins(GPIOA, MPU_MSCL_PIN |
@@ -214,11 +234,16 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_clearPins(GPIOB, MOTOR_AIN1_PIN |
 		MOTOR_AIN2_PIN);
     DL_GPIO_setPins(GPIOB, OLED_OSCL_PIN |
-		OLED_OSDA_PIN);
+		OLED_OSDA_PIN |
+		GPIO_IMU660RB_PIN_IMU660RB_CS_PIN);
     DL_GPIO_enableOutput(GPIOB, OLED_OSCL_PIN |
 		OLED_OSDA_PIN |
 		MOTOR_AIN1_PIN |
-		MOTOR_AIN2_PIN);
+		MOTOR_AIN2_PIN |
+		GPIO_IMU660RB_PIN_IMU660RB_CS_PIN);
+    DL_GPIO_setUpperPinsPolarity(GPIOB, DL_GPIO_PIN_21_EDGE_FALL);
+    DL_GPIO_clearInterruptStatus(GPIOB, GPIO_IMU660RB_PIN_IMU660RB_INT1_PIN);
+    DL_GPIO_enableInterrupt(GPIOB, GPIO_IMU660RB_PIN_IMU660RB_INT1_PIN);
 
 }
 
@@ -235,6 +260,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
     DL_SYSCTL_disableSYSPLL();
     DL_SYSCTL_setULPCLKDivider(DL_SYSCTL_ULPCLK_DIV_1);
     DL_SYSCTL_setMCLKDivider(DL_SYSCTL_MCLK_DIVIDER_DISABLE);
+    /* INT_GROUP1 Priority */
+    NVIC_SetPriority(GPIOB_INT_IRQn, 3);
 
 }
 
@@ -379,7 +406,7 @@ static const DL_TimerG_ClockConfig gTIMER_7ClockConfig = {
 
 /*
  * Timer load value (where the counter starts from) is calculated as (timerPeriod * timerClockFreq) - 1
- * TIMER_7_INST_LOAD_VALUE = (10 ms * 6400000 Hz) - 1
+ * TIMER_7_INST_LOAD_VALUE = (5 ms * 6400000 Hz) - 1
  */
 static const DL_TimerG_TimerConfig gTIMER_7TimerConfig = {
     .period     = TIMER_7_INST_LOAD_VALUE,
@@ -403,4 +430,36 @@ SYSCONFIG_WEAK void SYSCFG_DL_TIMER_7_init(void) {
 
 }
 
+
+static const DL_SPI_Config gSPI_IMU660RB_config = {
+    .mode        = DL_SPI_MODE_CONTROLLER,
+    .frameFormat = DL_SPI_FRAME_FORMAT_MOTO3_POL0_PHA0,
+    .parity      = DL_SPI_PARITY_NONE,
+    .dataSize    = DL_SPI_DATA_SIZE_8,
+    .bitOrder    = DL_SPI_BIT_ORDER_MSB_FIRST,
+};
+
+static const DL_SPI_ClockConfig gSPI_IMU660RB_clockConfig = {
+    .clockSel    = DL_SPI_CLOCK_BUSCLK,
+    .divideRatio = DL_SPI_CLOCK_DIVIDE_RATIO_1
+};
+
+SYSCONFIG_WEAK void SYSCFG_DL_SPI_IMU660RB_init(void) {
+    DL_SPI_setClockConfig(SPI_IMU660RB_INST, (DL_SPI_ClockConfig *) &gSPI_IMU660RB_clockConfig);
+
+    DL_SPI_init(SPI_IMU660RB_INST, (DL_SPI_Config *) &gSPI_IMU660RB_config);
+
+    /* Configure Controller mode */
+    /*
+     * Set the bit rate clock divider to generate the serial output clock
+     *     outputBitRate = (spiInputClock) / ((1 + SCR) * 2)
+     *     8000000 = (32000000)/((1 + 1) * 2)
+     */
+    DL_SPI_setBitRateSerialClockDivider(SPI_IMU660RB_INST, 1);
+    /* Set RX and TX FIFO threshold levels */
+    DL_SPI_setFIFOThreshold(SPI_IMU660RB_INST, DL_SPI_RX_FIFO_LEVEL_1_2_FULL, DL_SPI_TX_FIFO_LEVEL_1_2_EMPTY);
+
+    /* Enable module */
+    DL_SPI_enable(SPI_IMU660RB_INST);
+}
 

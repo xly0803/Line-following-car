@@ -133,8 +133,27 @@ extern "C" {
 #define TIMER_7_INST                                                     (TIMG7)
 #define TIMER_7_INST_IRQHandler                                 TIMG7_IRQHandler
 #define TIMER_7_INST_INT_IRQN                                   (TIMG7_INT_IRQn)
-#define TIMER_7_INST_LOAD_VALUE                                         (63999U)
+#define TIMER_7_INST_LOAD_VALUE                                         (31999U)
 
+
+
+/* Defines for SPI_IMU660RB */
+#define SPI_IMU660RB_INST                                                  SPI0
+#define SPI_IMU660RB_INST_IRQHandler                            SPI0_IRQHandler
+#define SPI_IMU660RB_INST_INT_IRQN                                SPI0_INT_IRQn
+#define GPIO_SPI_IMU660RB_PICO_PORT                                       GPIOB
+#define GPIO_SPI_IMU660RB_PICO_PIN                               DL_GPIO_PIN_17
+#define GPIO_SPI_IMU660RB_IOMUX_PICO                            (IOMUX_PINCM43)
+#define GPIO_SPI_IMU660RB_IOMUX_PICO_FUNC            IOMUX_PINCM43_PF_SPI0_PICO
+#define GPIO_SPI_IMU660RB_POCI_PORT                                       GPIOB
+#define GPIO_SPI_IMU660RB_POCI_PIN                               DL_GPIO_PIN_19
+#define GPIO_SPI_IMU660RB_IOMUX_POCI                            (IOMUX_PINCM45)
+#define GPIO_SPI_IMU660RB_IOMUX_POCI_FUNC            IOMUX_PINCM45_PF_SPI0_POCI
+/* GPIO configuration for SPI_IMU660RB */
+#define GPIO_SPI_IMU660RB_SCLK_PORT                                       GPIOB
+#define GPIO_SPI_IMU660RB_SCLK_PIN                               DL_GPIO_PIN_18
+#define GPIO_SPI_IMU660RB_IOMUX_SCLK                            (IOMUX_PINCM44)
+#define GPIO_SPI_IMU660RB_IOMUX_SCLK_FUNC            IOMUX_PINCM44_PF_SPI0_SCLK
 
 
 
@@ -145,11 +164,11 @@ extern "C" {
 #define GPIO_GRP_1_PIN_0_PIN                                    (DL_GPIO_PIN_27)
 #define GPIO_GRP_1_PIN_0_IOMUX                                   (IOMUX_PINCM58)
 /* Port definition for Pin Group KEY */
-#define KEY_PORT                                                         (GPIOB)
+#define KEY_PORT                                                         (GPIOA)
 
-/* Defines for FLAG: GPIOB.21 with pinCMx 49 on package pin 20 */
-#define KEY_FLAG_PIN                                            (DL_GPIO_PIN_21)
-#define KEY_FLAG_IOMUX                                           (IOMUX_PINCM49)
+/* Defines for FLAG: GPIOA.30 with pinCMx 5 on package pin 37 */
+#define KEY_FLAG_PIN                                            (DL_GPIO_PIN_30)
+#define KEY_FLAG_IOMUX                                            (IOMUX_PINCM5)
 /* Port definition for Pin Group GPIO_GRP_0 */
 #define GPIO_GRP_0_PORT                                                  (GPIOB)
 
@@ -211,6 +230,19 @@ extern "C" {
 #define MOTOR_BIN2_PORT                                                  (GPIOA)
 #define MOTOR_BIN2_PIN                                          (DL_GPIO_PIN_25)
 #define MOTOR_BIN2_IOMUX                                         (IOMUX_PINCM55)
+/* Port definition for Pin Group GPIO_IMU660RB */
+#define GPIO_IMU660RB_PORT                                               (GPIOB)
+
+/* Defines for PIN_IMU660RB_CS: GPIOB.20 with pinCMx 48 on package pin 19 */
+#define GPIO_IMU660RB_PIN_IMU660RB_CS_PIN                       (DL_GPIO_PIN_20)
+#define GPIO_IMU660RB_PIN_IMU660RB_CS_IOMUX                      (IOMUX_PINCM48)
+/* Defines for PIN_IMU660RB_INT1: GPIOB.21 with pinCMx 49 on package pin 20 */
+// pins affected by this interrupt request:["PIN_IMU660RB_INT1"]
+#define GPIO_IMU660RB_INT_IRQN                                  (GPIOB_INT_IRQn)
+#define GPIO_IMU660RB_INT_IIDX                  (DL_INTERRUPT_GROUP1_IIDX_GPIOB)
+#define GPIO_IMU660RB_PIN_IMU660RB_INT1_IIDX                (DL_GPIO_IIDX_DIO21)
+#define GPIO_IMU660RB_PIN_IMU660RB_INT1_PIN                     (DL_GPIO_PIN_21)
+#define GPIO_IMU660RB_PIN_IMU660RB_INT1_IOMUX                    (IOMUX_PINCM49)
 
 
 /* clang-format on */
@@ -223,6 +255,7 @@ void SYSCFG_DL_PWM_MOTOR_init(void);
 void SYSCFG_DL_QEI_0_init(void);
 void SYSCFG_DL_CAPTURE_0_init(void);
 void SYSCFG_DL_TIMER_7_init(void);
+void SYSCFG_DL_SPI_IMU660RB_init(void);
 
 
 bool SYSCFG_DL_saveConfiguration(void);

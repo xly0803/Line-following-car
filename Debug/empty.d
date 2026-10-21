@@ -1,6 +1,6 @@
 # FIXED
 
-empty.o: ../empty.c \
+.o: ../empty.c \
  ti_msp_dl_config.h \
  C:/ti/mspm0_sdk_2_10_00_04/source/ti/devices/msp/msp.h \
  C:/ti/mspm0_sdk_2_10_00_04/source/ti/devices/DeviceFamily.h \
@@ -93,7 +93,18 @@ empty.o: ../empty.c \
  C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Encoder.h \
  C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/PID.h \
  C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/FollowLine.h \
- C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Key.h
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Key.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/imu660rb.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/Fusion.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionAhrs.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionConvention.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionMath.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionAxes.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionCalibration.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionCompass.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionOffset.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MSPM0/clock.h \
+ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MSPM0/interrupt.h
 ti_msp_dl_config.h:
 C:/ti/mspm0_sdk_2_10_00_04/source/ti/devices/msp/msp.h:
 C:/ti/mspm0_sdk_2_10_00_04/source/ti/devices/DeviceFamily.h:
@@ -187,3 +198,14 @@ C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Encoder.h:
 C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/PID.h:
 C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/FollowLine.h:
 C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/Key.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/imu660rb.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/Fusion.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionAhrs.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionConvention.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionMath.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionAxes.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionCalibration.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionCompass.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/IMU660RB/FusionOffset.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MSPM0/clock.h:
+C:/Users/xuliangyun/workspace_ccstheia/xunjicar/Hardware/MSPM0/interrupt.h:
